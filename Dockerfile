@@ -3,6 +3,7 @@ FROM fedora:latest
 
 RUN yum install -y dnf dnf-plugins-core \
     && mkdir -p /etc/yum.repos.d/
-
+RUN dnf copr enable -y streeter/python-hwloc
 ### DOPR END
 
+RN dnf install -y python3-pip
